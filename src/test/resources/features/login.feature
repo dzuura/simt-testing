@@ -6,11 +6,13 @@ Feature: Login
   Scenario Outline: Successful login with valid credentials
     Given User is on the login page
     When User logs in with email "<email>" and password "<password>"
-    Then User should be redirected to dashboard
+    Then User should be redirected to "<redirectUrl>"
 
     Examples:
-      | email            | password   |
-      | admin@gmail.com  | admin1234  |
+      | email              | password     | redirectUrl                                       |
+      | admin@gmail.com    | admin1234    | https://sim-toko.madanateknologi.web.id/dashboard |
+      | kasir@gmail.com    | password123  | https://sim-toko.madanateknologi.web.id/katalog   |
+      | pelayan@gmail.com  | password123  | https://sim-toko.madanateknologi.web.id/katalog   |
 
   Scenario Outline: Failed login with invalid credentials
     Given User is on the login page

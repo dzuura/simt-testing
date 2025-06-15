@@ -30,9 +30,9 @@ public class LoginStepDef {
         loginPage.clickLogin();
     }
 
-    @Then("User should be redirected to dashboard")
-    public void userShouldBeRedirectedToDashboard() {
-        String expectedUrl = "https://sim-toko.madanateknologi.web.id/dashboard";
+    @Then("User should be redirected to {string}")
+    public void userShouldBeRedirectedTo(String expectedUrl) throws InterruptedException {
+        Thread.sleep(1000);
         Assertions.assertEquals(expectedUrl, context.getDriver().getCurrentUrl());
     }
 
