@@ -23,6 +23,7 @@ Feature: Login
       | email             | password    | errorMessage              |
       |                   | 1234        | Masukkan email Anda       |
       | admin@gmail.com   |             | Masukkan password Anda    |
+      |                   |             | Masukkan email Anda       |
       | admin1            | 1234        | Format email tidak valid. |
       | admin@gmail.com   | 12345       | Email atau password salah |
       | test@gmail.com    | admin1234   | Email atau password salah |

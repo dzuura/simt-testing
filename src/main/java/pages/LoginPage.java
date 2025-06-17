@@ -2,9 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import java.util.Arrays;
-import java.util.List;
 
 public class LoginPage extends BasePage {
     private final By emailField = By.id("email");

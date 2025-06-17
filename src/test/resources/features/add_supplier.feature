@@ -11,7 +11,7 @@ Feature: Add Supplier
   Scenario Outline: Successfully add a new supplier with valid data
     #langsung mulai dari sini
     Given User navigates to the supplier management page
-    When User clicks the "Add Supplier" button
+    When User clicks the "Add Supplier" buttons
     When User fills the add supplier form with name "<name>", contact "<contact>", address "<address>", company "<company>", and category "<category>"
     And User clicks the "Add Supplier" button to submit
     Then Supplier "<name>" should appear in the supplier list

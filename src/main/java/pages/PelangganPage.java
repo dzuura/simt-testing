@@ -17,7 +17,7 @@ public class PelangganPage {
 
     // Navigasi ke halaman pelanggan
     public void navigateToPelangganPage() {
-        driver.get("http://127.0.0.1:8000/pelanggan");
+        driver.get("https://sim-toko.madanateknologi.web.id/pelanggan");
     }
 
     // Klik tombol hapus berdasarkan ID

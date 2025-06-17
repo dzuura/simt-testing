@@ -68,9 +68,8 @@ public class SupplierPage extends BasePage{
     public void submitForm() {
         click(submitButton);
         new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.invisibilityOfElementLocated(By.id("modal-add-supplier"))); // ganti sesuai ID modal
+                .until(ExpectedConditions.invisibilityOfElementLocated(By.id("modal-add-supplier")));
     }
-
 
     public String getErrorMessage() {
         try {

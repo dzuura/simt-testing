@@ -23,7 +23,7 @@ public class AddSupplierStepDef {
         Assertions.assertEquals("https://sim-toko.madanateknologi.web.id/master/pemasok", context.getDriver().getCurrentUrl());
     }
 
-    @When("User clicks the {string} button")
+    @When("User clicks the {string} buttons")
     public void userClicksTheButton(String buttonName) {
         if (buttonName.equalsIgnoreCase("Add Supplier")) {
             supplierPage.openAddSupplierModal();
