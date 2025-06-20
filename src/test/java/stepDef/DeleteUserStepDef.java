@@ -24,7 +24,7 @@ public class DeleteUserStepDef {
     public void userNavigatesToPelangganPage() throws InterruptedException{
         Thread.sleep(500);
         pelangganPage.navigateToPelangganPage();
-        String expectedUrl = "http://127.0.0.1:8000/pelanggan";
+        String expectedUrl = "https://sim-toko.madanateknologi.web.id/pelanggan";
         Thread.sleep(500);
         Assertions.assertEquals(expectedUrl, context.getDriver().getCurrentUrl());
         Thread.sleep(500);
@@ -38,7 +38,7 @@ public class DeleteUserStepDef {
 
     @Then("User should see the delete confirmation popup with title {string}")
     public void userShouldSeeDeleteConfirmationPopup(String expectedTitle) throws InterruptedException{
-        Thread.sleep(500);
+        Thread.sleep(2000);
         String actualTitle = pelangganPage.getDeletePopupTitle();
         Thread.sleep(1000);
         Assertions.assertEquals(expectedTitle, actualTitle);

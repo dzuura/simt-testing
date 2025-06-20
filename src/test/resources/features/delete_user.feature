@@ -17,4 +17,4 @@ Feature: Delete Customer Data
 
     Examples:
       | customerId   |
-      | 101           |
+      | 28           |

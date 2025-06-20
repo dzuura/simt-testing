@@ -22,7 +22,7 @@ public class ProfileStepDef {
 
     @Then("User should be redirected to dashboardd")
     public void userShouldBeRedirectedToDashboardd() throws InterruptedException {
-        String expectedUrl = "http://127.0.0.1:8000/dashboard";
+        String expectedUrl = "https://sim-toko.madanateknologi.web.id/dashboard";
         Thread.sleep(1000);
         Assertions.assertEquals(expectedUrl, context.getDriver().getCurrentUrl());
     }
@@ -30,7 +30,7 @@ public class ProfileStepDef {
     @Given("User navigates to the user profile")
     public void userNavigatesToTheProfilePage() {
         userProfile.navigateToProfile();
-        String expectedUrl = "http://127.0.0.1:8000/profile";
+        String expectedUrl = "https://sim-toko.madanateknologi.web.id/profile";
         Assertions.assertEquals(expectedUrl, context.getDriver().getCurrentUrl());
     }
 

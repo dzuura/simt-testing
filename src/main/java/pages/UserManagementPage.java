@@ -64,8 +64,8 @@ public class UserManagementPage extends BasePage {
 
     public String getErrorMessage() {
         try {
-            WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(sweetAlertPopup));
-            WebElement messageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(sweetAlertErrorMessage));
+            WebElement popup = waitForVisibility(sweetAlertPopup);
+            WebElement messageElement = waitForVisibility(sweetAlertErrorMessage);
             String message = messageElement.getText().trim();
 
             wait.withTimeout(Duration.ofSeconds(3)).until(ExpectedConditions.invisibilityOf(popup));
